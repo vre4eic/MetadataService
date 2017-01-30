@@ -1,7 +1,10 @@
 package eu.vre4eic.evre.metadatamanager.model;
 
-/**
+/** MetadataEntry is a POJO that is responsible for capturing particular 
+ * metadata information about resources.
+ * 
  * @author Yannis Marketakis (marketak 'at' ics 'dot' forth 'dot' gr)
+ * //FORTH team to add their credits here
  */
 public class MetadataEntry {
     private String resourceUri;
