@@ -19,6 +19,7 @@ public interface GetMetadata {
     /**The method takes as input a resource (either URI or literal value), and the corresponding graphspaces
      * and returns the contents of the metadata catalogue as a collection of triples 
      * (i.e. [S, P, O], where S=subject, P=predicate and O=Object). 
+     * 
      * @param resourceURI the resource (either the URI or a literal value) that will be searched for
      * @param graphspaces the graphspaces that will be used for retrieving the given resource URI
      * 
@@ -30,8 +31,9 @@ public interface GetMetadata {
      * that will be searched and the corresponding graphspaces
      * and returns the contents of the metadata catalogue as a collection of triples 
      * (i.e. [S, P, O], where S=subject, P=predicate and O=Object). 
+     * 
      * @param resource the resource (either the URI or a literal value) of that will be searched for
-     * @param metadataType the type of the metadata field (i.e. owner of the dataset, mime type, etc.)
+     * @param metadataType the type of the metadata field (e.g. owner of the dataset, mime type, etc.)
      * @param graphspaces the graphspaces that will be used for retrieving the given resource URI
      * 
      * @return a collection of triples, that exist in the given graphspaces, where the given resource exists.*/
