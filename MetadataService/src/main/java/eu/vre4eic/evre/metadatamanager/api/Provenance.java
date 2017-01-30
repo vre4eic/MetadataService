@@ -33,4 +33,14 @@ public interface Provenance {
      * @return a collection of triples describing provenance information about the given resource
      */
     public Collection<Triple> getProvenanceMetadataUsingType(String resourceURI, ProvenanceMetadataType provenanceMetadataType);
+    
+    /**The method updates (or adds if such information does not exist particular 
+     * information about the provenance of a resource. The type of the metadata 
+     * and the corresponding value are also given in the parameters list.
+     * 
+     * @param resourceURI the URI of the resource that has provenance information attached to it
+     * @param provenanceMetadataType the type of the provenance metadata information that will searched for
+     * @param metadataValue the actual value of the corresponding provenance metadata type 
+     */
+    public void updateProvenanceMetadata(String resourceURI, ProvenanceMetadataType provenanceMetadataType, String metadataValue);
 }
