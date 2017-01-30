@@ -1,8 +1,6 @@
 package eu.vre4eic.evre.metadatamanager.api;
 
 import eu.vre4eic.evre.metadatamanager.model.MetadataType;
-import java.util.Collection;
-import org.apache.commons.lang3.tuple.Triple;
 
 /**
  * The Metadata Manager is responsible for storing, manipulating and exposing 
