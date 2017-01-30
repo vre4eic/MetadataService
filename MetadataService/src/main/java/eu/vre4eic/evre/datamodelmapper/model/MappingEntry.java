@@ -1,48 +1,40 @@
-package eu.vre4eic.evre.metadatamanager.model;
+package eu.vre4eic.evre.datamodelmapper.model;
 
-/** MetadataEntry is a POJO that is responsible for capturing particular 
- * metadata information about resources.
+import eu.vre4eic.evre.metadatamanager.model.*;
+
+/** MappingEntry is a POJO that is responsible for capturing particular 
+ * information about managing mappings.
  * 
  * @author Yannis Marketakis (marketak 'at' ics 'dot' forth 'dot' gr)
  * //FORTH team to add their credits here
  */
-public class MetadataEntry {
-    private String resourceUri;
-    private String resourceValue;
-    private MetadataType metadataType;
+public class MappingEntry {
+    private String mappingID;
+    private String mappingExpression;
     
-    public MetadataEntry(String metadataResourceUri, String metadataResourceValue, MetadataType metadataResourceType){
-        this.resourceUri=metadataResourceUri;
-        this.resourceValue=metadataResourceValue;
-        this.metadataType=metadataResourceType;
+    public MappingEntry(String mappingId, String mappingExpressionValue){
+        this.mappingID=mappingId;
+        this.mappingExpression=mappingExpressionValue;
     }
 
-    public String getResourceUri() {
-        return this.resourceUri;
+    public String getMappingID() {
+        return this.mappingID;
     }
 
-    public void setResourceUri(String resourceUri) {
-        this.resourceUri = resourceUri;
+    public void setMappingID(String mappingID) {
+        this.mappingID = mappingID;
+    }
+    
+    public String getMappingExpression() {
+        return this.mappingExpression;
     }
 
-    public String getResourceValue() {
-        return this.resourceValue;
-    }
-
-    public void setResourceValue(String resourceValue) {
-        this.resourceValue = resourceValue;
-    }
-
-    public MetadataType getMetadataType() {
-        return this.metadataType;
-    }
-
-    public void setMetadataType(MetadataType metadataType) {
-        this.metadataType = metadataType;
+    public void setMappingExpression(String mappingExpression) {
+        this.mappingExpression = mappingExpression;
     }
 
     @Override
     public String toString(){
-        return this.resourceUri+" - "+this.resourceValue+" - "+this.metadataType;
+        return this.mappingID+" - "+this.mappingExpression;
     }
 }
